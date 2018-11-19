@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CIS560.Order
+namespace CIS560
 {
     public class Order
     {
