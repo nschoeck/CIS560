@@ -10,6 +10,6 @@ namespace CIS560
     {
         IReadOnlyList<Address> RetrieveAddresses();
         Address GetAddress(int addressId);
-        Address CreateAddress(int addressId, string line1, string line2, string city, string state, int zip);
+        Address CreateAddress(string line1, string line2, string city, string state, int zip);
     }
 }

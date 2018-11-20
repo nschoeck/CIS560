@@ -10,6 +10,6 @@ namespace CIS560
     {
         IReadOnlyList<Restaurant> RetrieveRestaurants();
         Restaurant GetRestaurant(int restaurantId);
-        Restaurant CreateRestaurant(int restaurantId, string name, int addressId);
+        Restaurant CreateRestaurant(string name, int addressId);
     }
 }

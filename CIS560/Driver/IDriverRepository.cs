@@ -10,6 +10,6 @@ namespace CIS560
     {
         IReadOnlyList<Driver> RetrieveDrivers();
         Driver GetDriver(int driverId);
-        Driver CreateDriver(int driverId, string firstName, string lastName, string driversLicenseNumber);
+        Driver CreateDriver(string firstName, string lastName, string driversLicenseNumber);
     }
 }

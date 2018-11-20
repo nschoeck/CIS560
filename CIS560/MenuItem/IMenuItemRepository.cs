@@ -10,6 +10,6 @@ namespace CIS560
     {
         IReadOnlyList<MenuItem> RetrieveMenuItems();
         MenuItem GetMenuItem(int menuItemId);
-        MenuItem CreateMenuItem(int menuItemId, int restaurantId, string name, decimal price);
+        MenuItem CreateMenuItem(int restaurantId, string name, decimal price);
     }
 }
