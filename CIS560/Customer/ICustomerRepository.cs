@@ -10,6 +10,6 @@ namespace CIS560
     {
         IReadOnlyList<Customer> RetrieveCustomers();
         Customer GetCustomer(int customerId);
-        Customer CreateCustomer(int customerId, string firstName, string lastName, int primaryAddressId, string email, int phoneNumber);
+        Customer CreateCustomer(string firstName, string lastName, int primaryAddressId, string email, int phoneNumber);
     }
 }

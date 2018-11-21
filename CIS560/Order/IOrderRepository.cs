@@ -10,6 +10,6 @@ namespace CIS560
     {
         IReadOnlyList<Order> RetrieveOrders();
         Order GetOrder(int orderId);
-        Order CreateOrder(int orderId, int customerId, int driverId, int addressId);
+        Order CreateOrder(int customerId, int driverId, int addressId);
     }
 }
