@@ -1,27 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Transactions;
 using System.Data;
+using System.Transactions;
+using System.Data.SqlClient;
 
 namespace CIS560
 {
-    /// <summary>
-    /// The repository for creating and getting customers in the database
-    /// </summary>
-    class CustomerRepository : ICustomerRepository
+    class DriverRepository : IDriverRepository
     {
         SqlConnectionStringBuilder sqlBuilder = SqlBuilder.SqlConnectingStringBuilder;
 
         /// <summary>
-        /// Gets all customers in the database
+        /// Creates a driver in the database
         /// </summary>
-        /// <returns>
-        /// A <see cref="List{T}"/> of every <see cref="Customer"/> in the database, or an empty list if none are found
-        /// </returns>
-        public Customer CreateCustomer(string firstName, string lastName, int primaryAddressId, string email, int phoneNumber)
+        /// <param name="firstName">The first name of the driver</param>
+        /// <param name="lastName">The last name of the driver</param>
+        /// <param name="driversLicenseNumber">The drivers license number of the driver</param>
+        /// <returns>The created <see cref="Driver"/> if successful, otherwise <code>null</code></returns>
+        public Driver CreateDriver(string firstName, string lastName, string driversLicenseNumber)
         {
-            const string sqlCommandText = "CIS560.CreateCustomer";
+            const string sqlCommandText = "CIS560.CreateDriver";
 
             try
             {
@@ -35,11 +33,9 @@ namespace CIS560
 
                             command.Parameters.AddWithValue("FirstName", firstName);
                             command.Parameters.AddWithValue("LastName", lastName);
-                            command.Parameters.AddWithValue("PrimaryAddressID", primaryAddressId);
-                            command.Parameters.AddWithValue("Email", email);
-                            command.Parameters.AddWithValue("PhoneNumber", phoneNumber);
+                            command.Parameters.AddWithValue("DriverLicenseNumber", driversLicenseNumber);
 
-                            SqlParameter param = command.Parameters.Add("CustomerID", SqlDbType.Int);
+                            SqlParameter param = command.Parameters.Add("DriverID", SqlDbType.Int);
                             param.Direction = ParameterDirection.Output;
 
                             connection.Open();
@@ -48,35 +44,35 @@ namespace CIS560
 
                             transaction.Complete();
 
-                            return new Customer((int)param.Value, firstName, lastName, primaryAddressId, email, phoneNumber);
+                            return new Driver((int)param.Value, firstName, lastName, driversLicenseNumber);
                         }
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Console.WriteLine("Could not create customer.  Exited with: {0}", e.Message);
+                Console.WriteLine("Could not create driver.  Exited with: {0}", e.Message);
                 return null;
             }
         }
 
         /// <summary>
-        /// Gets a <see cref="Customer"/> from the table.
+        /// Gets the driver with the given <code>driverId</code>
         /// </summary>
-        /// <param name="customerId">The ID of the desired <see cref="Customer"/></param>
+        /// <param name="driverId">The ID of the desired driver</param>
         /// <returns>
-        /// The <see cref="Customer"/> containing the <code>customerId</code>, or <code>null</code> if there is none
+        /// A <see cref="Driver"/> with the given <code>driverId</code> if found, otherwise <code>null</code>
         /// </returns>
-        public Customer GetCustomer(int customerId)
+        public Driver GetDriver(int driverId)
         {
             //TODO: Set command
-            string sqlCommandText = "CIS560.GetCustomer";
+            string sqlCommandText = "CIS560.GetDriver";
             using (SqlConnection connection = new SqlConnection(sqlBuilder.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(sqlCommandText, connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("CustomerID", customerId);
+                    command.Parameters.AddWithValue("DriverID", driverId);
                     connection.Open();
 
                     SqlDataReader reader = command.ExecuteReader();
@@ -86,28 +82,26 @@ namespace CIS560
                         return null;
                     }
 
-                    return new Customer(
-                        customerId,
+                    return new Driver(
+                        driverId,
                         reader.GetString(reader.GetOrdinal("FirstName")),
                         reader.GetString(reader.GetOrdinal("LastName")),
-                        reader.GetInt32(reader.GetOrdinal("PrimaryAddressID")),
-                        reader.GetString(reader.GetOrdinal("Email")),
-                        reader.GetInt32(reader.GetOrdinal("PhoneNumber"))
+                        reader.GetString(reader.GetOrdinal("DriversLicenseNumber"))
                     );
                 }
             }
         }
 
         /// <summary>
-        /// Gets all customers in the database
+        /// Gets all the drivers in the database
         /// </summary>
         /// <returns>
-        /// A <see cref="List{T}"/> of every <see cref="Customer"/> in the database, or an empty list if none are found
+        /// A <see cref="List{T}"/> of <see cref="Driver"/>s in the database, or empty if there are none.
         /// </returns>
-        public IReadOnlyList<Customer> RetrieveCustomers()
+        public IReadOnlyList<Driver> RetrieveDrivers()
         {
             //TODO: Set command here
-            string sqlCommandText = "CIS560.RetrieveCustomers";
+            string sqlCommandText = "CIS560.RetrieveDrivers";
             using (SqlConnection connection = new SqlConnection(sqlBuilder.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(sqlCommandText, connection))
@@ -118,21 +112,19 @@ namespace CIS560
 
                     SqlDataReader reader = command.ExecuteReader();
 
-                    List<Customer> customers = new List<Customer>();
+                    List<Driver> drivers = new List<Driver>();
 
                     while (reader.Read())
                     {
-                        customers.Add(new Customer(
-                            reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                        drivers.Add(new Driver(
+                            reader.GetInt32(reader.GetOrdinal("DriverID")),
                             reader.GetString(reader.GetOrdinal("FirstName")),
                             reader.GetString(reader.GetOrdinal("LastName")),
-                            reader.GetInt32(reader.GetOrdinal("PrimaryAddressID")),
-                            reader.GetString(reader.GetOrdinal("Email")),
-                            reader.GetInt32(reader.GetOrdinal("PhoneNumber"))
+                            reader.GetString(reader.GetOrdinal("DriversLicenseNumber"))
                         ));
                     }
 
-                    return customers;
+                    return drivers;
                 }
             }
         }

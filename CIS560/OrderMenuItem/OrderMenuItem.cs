@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CIS560
 {
+    /// <summary>
+    /// An object to hold a menu item in an order and how many times it was purchased
+    /// </summary>
     public class OrderMenuItem
     {
         private int orderId { get; }

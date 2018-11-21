@@ -53,6 +53,7 @@
     <Compile Include="Customer\CustomerRepository.cs" />
     <Compile Include="Customer\ICustomerRepository.cs" />
     <Compile Include="Driver\Driver.cs" />
+    <Compile Include="Driver\DriverRepository.cs" />
     <Compile Include="Driver\IDriverRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

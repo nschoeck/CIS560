@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Transactions;
 using System.Data;
@@ -59,9 +56,9 @@ namespace CIS560
                     }
                 }
             }
-            catch(TransactionAbortedException ex)
+            catch(Exception e)
             {
-                Console.WriteLine("Could not create address. Exited with: {0}", ex.Message);
+                Console.WriteLine("Could not create address. Exited with: {0}", e.Message);
                 return null;
             }
         }
@@ -107,7 +104,10 @@ namespace CIS560
         /// <summary>
         /// Gets all the addresses in the table
         /// </summary>
-        /// <returns>A <see cref="List{T}"/> of <see cref="Address">Addresses</see>/>.  This may be empty if none are found in the databse.</returns>
+        /// <returns>
+        /// A <see cref="List{T}"/> of <see cref="Address">Addresses</see>/>.  This may be empty if none 
+        /// are found in the databse.
+        /// </returns>
         public IReadOnlyList<Address> RetrieveAddresses()
         {
             //TODO: Set command here

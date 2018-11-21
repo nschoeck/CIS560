@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CIS560
 {
+    /// <summary>
+    /// An object representing a driver
+    /// </summary>
     public class Driver
     {
         int driverId { get; }
