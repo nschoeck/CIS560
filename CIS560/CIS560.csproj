@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address\Address.cs" />
+    <Compile Include="Address\AddressRepository.cs" />
     <Compile Include="Address\IAddressRepository.cs" />
     <Compile Include="Customer\Customer.cs" />
+    <Compile Include="Customer\CustomerRepository.cs" />
     <Compile Include="Customer\ICustomerRepository.cs" />
     <Compile Include="Driver\Driver.cs" />
+    <Compile Include="Driver\DriverRepository.cs" />
     <Compile Include="Driver\IDriverRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -70,6 +74,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="SqlBuilder.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -91,6 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\CreateTables.sql" />
+    <Content Include="SQL\Procedures\Address\CreateAddress.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
