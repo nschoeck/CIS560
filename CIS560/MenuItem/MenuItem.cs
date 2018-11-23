@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CIS560
 {
+    /// <summary>
+    /// An object to represent a menu itme
+    /// </summary>
     public class MenuItem
     {
         private int menuItemId { get; }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CIS560
 {
+    /// <summary>
+    /// An object representing an order
+    /// </summary>
     public class Order
     {
         private int orderId { get; }
