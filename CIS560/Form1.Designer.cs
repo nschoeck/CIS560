@@ -28,74 +28,126 @@ namespace CIS560
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.debugInstructionsLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.helloWorldLabel = new System.Windows.Forms.Label();
+            this.uiTabControl = new System.Windows.Forms.TabControl();
+            this.uiAddressTab = new System.Windows.Forms.TabPage();
+            this.uiCustomerTab = new System.Windows.Forms.TabPage();
+            this.uiDriverTab = new System.Windows.Forms.TabPage();
+            this.uiMenuItemTab = new System.Windows.Forms.TabPage();
+            this.uiOrderTab = new System.Windows.Forms.TabPage();
+            this.uiOrderMenuItemTab = new System.Windows.Forms.TabPage();
+            this.uiRestaurantTab = new System.Windows.Forms.TabPage();
+            this.uiTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // uiTabControl
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(191, 351);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(418, 20);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click here to continue learning how to build a desktop app!";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.uiTabControl.Controls.Add(this.uiAddressTab);
+            this.uiTabControl.Controls.Add(this.uiCustomerTab);
+            this.uiTabControl.Controls.Add(this.uiDriverTab);
+            this.uiTabControl.Controls.Add(this.uiMenuItemTab);
+            this.uiTabControl.Controls.Add(this.uiOrderTab);
+            this.uiTabControl.Controls.Add(this.uiOrderMenuItemTab);
+            this.uiTabControl.Controls.Add(this.uiRestaurantTab);
+            this.uiTabControl.Location = new System.Drawing.Point(-2, -2);
+            this.uiTabControl.Name = "uiTabControl";
+            this.uiTabControl.SelectedIndex = 0;
+            this.uiTabControl.Size = new System.Drawing.Size(590, 315);
+            this.uiTabControl.TabIndex = 0;
             // 
-            // debugInstructionsLabel
+            // uiAddressTab
             // 
-            this.debugInstructionsLabel.AutoSize = true;
-            this.debugInstructionsLabel.Location = new System.Drawing.Point(146, 107);
-            this.debugInstructionsLabel.Name = "debugInstructionsLabel";
-            this.debugInstructionsLabel.Size = new System.Drawing.Size(532, 20);
-            this.debugInstructionsLabel.TabIndex = 1;
-            this.debugInstructionsLabel.Text = "Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app!";
+            this.uiAddressTab.Location = new System.Drawing.Point(4, 22);
+            this.uiAddressTab.Name = "uiAddressTab";
+            this.uiAddressTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiAddressTab.Size = new System.Drawing.Size(582, 289);
+            this.uiAddressTab.TabIndex = 0;
+            this.uiAddressTab.Text = "Address";
+            this.uiAddressTab.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // uiCustomerTab
             // 
-            this.button1.Location = new System.Drawing.Point(325, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Click Me!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.uiCustomerTab.Location = new System.Drawing.Point(4, 22);
+            this.uiCustomerTab.Name = "uiCustomerTab";
+            this.uiCustomerTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiCustomerTab.Size = new System.Drawing.Size(582, 289);
+            this.uiCustomerTab.TabIndex = 1;
+            this.uiCustomerTab.Text = "Customer";
+            this.uiCustomerTab.UseVisualStyleBackColor = true;
             // 
-            // helloWorldLabel
+            // uiDriverTab
             // 
-            this.helloWorldLabel.AutoSize = true;
-            this.helloWorldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helloWorldLabel.Location = new System.Drawing.Point(303, 30);
-            this.helloWorldLabel.Name = "helloWorldLabel";
-            this.helloWorldLabel.Size = new System.Drawing.Size(192, 37);
-            this.helloWorldLabel.TabIndex = 3;
-            this.helloWorldLabel.Text = "Hello World!";
+            this.uiDriverTab.Location = new System.Drawing.Point(4, 22);
+            this.uiDriverTab.Name = "uiDriverTab";
+            this.uiDriverTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiDriverTab.Size = new System.Drawing.Size(582, 289);
+            this.uiDriverTab.TabIndex = 2;
+            this.uiDriverTab.Text = "Driver";
+            this.uiDriverTab.UseVisualStyleBackColor = true;
+            // 
+            // uiMenuItemTab
+            // 
+            this.uiMenuItemTab.Location = new System.Drawing.Point(4, 22);
+            this.uiMenuItemTab.Name = "uiMenuItemTab";
+            this.uiMenuItemTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiMenuItemTab.Size = new System.Drawing.Size(582, 289);
+            this.uiMenuItemTab.TabIndex = 3;
+            this.uiMenuItemTab.Text = "Menu Item";
+            this.uiMenuItemTab.UseVisualStyleBackColor = true;
+            // 
+            // uiOrderTab
+            // 
+            this.uiOrderTab.Location = new System.Drawing.Point(4, 22);
+            this.uiOrderTab.Name = "uiOrderTab";
+            this.uiOrderTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiOrderTab.Size = new System.Drawing.Size(582, 289);
+            this.uiOrderTab.TabIndex = 4;
+            this.uiOrderTab.Text = "Order";
+            this.uiOrderTab.UseVisualStyleBackColor = true;
+            // 
+            // uiOrderMenuItemTab
+            // 
+            this.uiOrderMenuItemTab.Location = new System.Drawing.Point(4, 22);
+            this.uiOrderMenuItemTab.Name = "uiOrderMenuItemTab";
+            this.uiOrderMenuItemTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiOrderMenuItemTab.Size = new System.Drawing.Size(582, 289);
+            this.uiOrderMenuItemTab.TabIndex = 5;
+            this.uiOrderMenuItemTab.Text = "Order Menu Item";
+            this.uiOrderMenuItemTab.UseVisualStyleBackColor = true;
+            // 
+            // uiRestaurantTab
+            // 
+            this.uiRestaurantTab.Location = new System.Drawing.Point(4, 22);
+            this.uiRestaurantTab.Name = "uiRestaurantTab";
+            this.uiRestaurantTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiRestaurantTab.Size = new System.Drawing.Size(582, 289);
+            this.uiRestaurantTab.TabIndex = 6;
+            this.uiRestaurantTab.Text = "Restaurant";
+            this.uiRestaurantTab.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.helloWorldLabel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.debugInstructionsLabel);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(584, 311);
+            this.Controls.Add(this.uiTabControl);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.uiTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label debugInstructionsLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label helloWorldLabel;
+        private System.Windows.Forms.TabControl uiTabControl;
+        private System.Windows.Forms.TabPage uiAddressTab;
+        private System.Windows.Forms.TabPage uiCustomerTab;
+        private System.Windows.Forms.TabPage uiDriverTab;
+        private System.Windows.Forms.TabPage uiMenuItemTab;
+        private System.Windows.Forms.TabPage uiOrderTab;
+        private System.Windows.Forms.TabPage uiOrderMenuItemTab;
+        private System.Windows.Forms.TabPage uiRestaurantTab;
     }
 }
 
