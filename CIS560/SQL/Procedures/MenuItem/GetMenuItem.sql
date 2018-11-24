@@ -1,0 +1,8 @@
+CREATE OR ALTER PROCEDURE CIS560.GetMenuItem
+   @MenuItemID INT
+AS
+
+SELECT MI.RestaurantID, MI.Name, MI.Price
+FROM CIS560.MenuItem MI
+WHERE MI.MenuItemID = @MenuItemID;
+GO
