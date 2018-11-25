@@ -1,0 +1,137 @@
+﻿INSERT INTO CIS560.MenuItem(RestaurantID,Name,Price)
+VALUES (1,'Dave''s Double',5.29),
+	   (1,'Baconator',6.49),
+	   (1,'Double Stack',0.99),
+	   (1,'Spicy Chicken Sandwich',4.79),
+	   (1,'Chicken Tenders Combo',6.89),	
+	   
+	   (2,'Big Mac',3.99),
+	   (2,'Quarter Pounder with Cheese',3.79),
+	   (2,'Artisan Grilled Chicken',4.39),
+	   (2,'Filet-O-Fish',3.79),
+	   (2,'Small French Fries',1.39),
+	   
+	   (3,'Box Combo',6.98),
+	   (3,'3 Finger Combo',6.38),
+	   (3,'Caniac Combo',9.98),
+	   (3,'Kids Combo',4.58),
+	   (3,'Coleslaw',0.69),	
+	   
+	   (4,'Roasted Turkey & Avocado BLT - Whole',8.99),
+	   (4,'Frontega Chicken Panini - Whole',7.99),
+	   (4,'Sierra Turkey Sandwhich - Whole',7.39),
+	   (4,'Mac & Cheese - Large',7.99),
+	   (4,'Southwestern Chicken Flatbread',4.99),
+	   
+	   (5,'Classic Calamari',9.99),
+	   (5,'Fried Mozzarella',6.49),
+	   (5,'Minestrone',5.79),
+	   (5,'Chicken Parmigiana',15.49),
+	   (5,'Chicken Alfredo',14.99),	
+	   
+	   (6,'Sweet and Sour Pork',8.55),
+	   (6,'Beef with Broccoli',8.95),
+	   (6,'Sweet and Sour Chicken',8.55),
+	   (6,'Large Egg Drop Soup',3.95),
+	   (6,'Curry Shrimp',9.95),
+	   
+	   (7,'Buffalo Chicken Tenders',9.95),
+	   (7,'Kansas City Burger',14.50),
+	   (7,'French Dip',13.50),
+	   (7,'Steak & Wedge Salad',16.50),
+	   (7,'Fish and Chips',14.95),	
+	   
+	   (8,'Garlic Knots',1.50),
+	   (8,'Cinnamon Knots',2.50),
+	   (8,'Large Pepperoni Pizza',12.99),
+	   (8,'Slice of Cheese Pizza',2.99),
+	   (8,'Meatball Parmesan Hero',7.49),
+	   
+	   (9,'Gold Box Lunch',7.99),
+	   (9,'Penny Club',6.69),
+	   (9,'Slow-Cooked Roast Beef',6.69),
+	   (9,'Meatball Sub',6.89),
+	   (9,'Chicken Alfredo',7.99),
+	   
+	   (10,'Chicken Burrito',6.50),
+	   (10,'Steak Bowl',7.50),
+	   (10,'Sofritas Bowl',6.50),
+	   (10,'Carnitas Tacos',6.95),
+	   (10,'Cheese Quesadilla',3.75),	
+	   
+	   (11,'Cheeseburger',6.89),
+	   (11,'Bacon Burger',4.39),
+	   (11,'Regular Cajun Fries',3.79),
+	   (11,'Regular Fries',3.79),
+	   (11,'Hot Dog',4.09),
+	   
+	   (12,'Huevos Rancheros',6.59),
+	   (12,'Chips and Queso',3.29),
+	   (12,'Beef Fajita Salad',5.21),
+	   (12,'Crawfish Taco',2.30),
+	   (12,'Shredded Spicy Pork Burrito',6.04),	
+	   
+	   (13,'Chicken Queso Burrito',7.50),
+	   (13,'Pork Mexican Gumbo',8.40),
+	   (13,'Shredded Beef Taco Salad',8.40),
+	   (13,'Steak Quesadilla',8.40),
+	   (13,'Chips and Guacamole',3.00),
+	   
+	   (14,'Cheese Fries',6.99),
+	   (14,'Grilled Salmon Salad',11.99),
+	   (14,'All-American Cheeseburger',8.99),
+	   (14,'Country Fried Sirloin Dinner',8.99),
+	   (14,'Chicken Critters Dinner',8.99),	
+	   
+	   (15,'Sweet Corn Fritters',3.99),
+	   (15,'Spinach Dip',7.49),
+	   (15,'Grilled Chicken & Strawberry Salad',10.99),
+	   (15,'Shaved Prime Rib Sandwich',11.99),
+	   (15,'Flo''s Filet & Lobster Tail',27.49);
+
+INSERT INTO CIS560.Drivers(FirstName, LastName, DriversLicenseNumber)
+VALUES ('Ronald','Darby','K13-23-0188'),
+	   ('James','Bradberry','K11-15-8764'),
+	   ('TreDavious','White','K13-23-0188'),
+	   ('Kyle','Fuller','K14-13-4778'),
+	   ('Kendall','Fuller','K15-23-7818'),
+	   ('AJ','Bouye','K10-17-5691'),
+	   ('Jason','Verrett','K14-19-6213'),
+	   ('Marshon','Lattimore','K15-17-5532'),
+	   ('Marcus','Peters','K10-27-1001'),
+	   ('Jimmy','Smith','K15-19-2420');
+
+INSERT INTO CIS560.Restaurant(Name,AddressID)
+VALUES ('Wendys', 1),
+	   ('McDonalds', 2),
+	   ('Raising Canes', 3),
+	   ('Panera Bread', 4),
+	   ('Olive Garden', 5),
+	   ('Tasty China House', 6),
+	   ('Houlihan''s', 7),
+	   ('AJ''s NY Pizzeria', 8),
+	   ('Goodcents', 9),
+	   ('Chipotle', 10),
+	   ('Five Guys', 11),
+	   ('Fuzzys', 12),
+	   ('Qdoba Mexican Grill', 13),
+	   ('Texas Roadhouse', 14),
+	   ('Longhorn Steakhouse', 15);
+
+INSERT INTO CIS560.Address(Line1, Line2, City, State, Zip)
+VALUES
+    ('100 Goodfood Place', '', 'Manhattan', 'KS', 66502),
+    ('800 N 4th Street', '', 'Manhattan', 'KS', 66502),
+    ('329 East Poyntz Avenue', '', 'Manhattan', 'KS', 66502),
+    ('325 East Poyntz Avenue', '', 'Manhattan', 'KS', 66502),
+    ('715 Tuttle Creek Boulevard', '', 'Manhattan', 'KS', 66502),
+    ('1120 Moro Street', '', 'Manhattan', 'KS', 66502),
+    ('1641 Anderson Ave', '', 'Manhattan', 'KS', 66502),
+    ('301 Poyntz Avenue', '', 'Manhattan', 'KS', 66502),
+    ('1317 Anderson Avenue', '', 'Manhattan', 'KS', 66502),
+    ('606 North Manhattan Avenue', '', 'Manhattan', 'KS', 66502),
+    ('518 Tuttle Creek Boulevard', '', 'Manhattan', 'KS', 66502),
+    ('606 North 12th Street', '', 'Manhattan', 'KS', 66502),
+    ('320 North 3rd Street', 'Building 0', 'Manhattan', 'KS', 66502),
+    ('200 Manhattan Town Center', '', 'Manhattan', 'KS', 66502),
+    ('505 Tuttle Creek Boulevard', '', 'Manhattan', 'KS', 66502);
