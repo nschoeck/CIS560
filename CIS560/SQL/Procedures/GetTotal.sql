@@ -1,0 +1,7 @@
+﻿CREATE OR ALTER PROCEDURE CIS560.GetTotal
+AS
+
+SELECT SUM(OMI.MenuItemQuantity * MI.Price) AS TotalAmountMade
+FROM CIS560.OrderMenuItem OMI
+	INNER JOIN CIS560.MenuItem MI ON MI.MenuItemID = OMI.MenuItemID
+GO
