@@ -30,6 +30,8 @@ namespace CIS560
         {
             this.uiTabControl = new System.Windows.Forms.TabControl();
             this.uiAddressTab = new System.Windows.Forms.TabPage();
+            this.uiAddressClearButton = new System.Windows.Forms.Button();
+            this.uiChangeAddressButton = new System.Windows.Forms.Button();
             this.uiAddressLine2 = new System.Windows.Forms.Label();
             this.uiAddressLine1 = new System.Windows.Forms.Label();
             this.uiAddressZip = new System.Windows.Forms.Label();
@@ -45,13 +47,14 @@ namespace CIS560
             this.uiAddressIDTextBox = new System.Windows.Forms.TextBox();
             this.uiGetAddress = new System.Windows.Forms.Label();
             this.uiCustomerTab = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.uiCustomerClearButton = new System.Windows.Forms.Button();
+            this.uiCustomerPhoneNumber = new System.Windows.Forms.Label();
             this.uiCustomerEmail = new System.Windows.Forms.Label();
             this.uiCustomerAddressID = new System.Windows.Forms.Label();
             this.uiCustomerLastName = new System.Windows.Forms.Label();
             this.uiCustomerFirstName = new System.Windows.Forms.Label();
             this.uiCreateCustomerButton = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.uiCustomerPhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.uiCustomerEmailTextBox = new System.Windows.Forms.TextBox();
             this.uiCustomerAddressIDTextBox = new System.Windows.Forms.TextBox();
             this.uiCustomerLastNameTextBox = new System.Windows.Forms.TextBox();
@@ -60,6 +63,7 @@ namespace CIS560
             this.uiCustomerIDTextBox = new System.Windows.Forms.TextBox();
             this.uiCustomerID = new System.Windows.Forms.Label();
             this.uiDriverTab = new System.Windows.Forms.TabPage();
+            this.uiDriverClearButton = new System.Windows.Forms.Button();
             this.uiCreateDriverButton = new System.Windows.Forms.Button();
             this.uiDriverLicenseNumber = new System.Windows.Forms.Label();
             this.uiDriverLastName = new System.Windows.Forms.Label();
@@ -71,6 +75,7 @@ namespace CIS560
             this.uiDriverIDTextBox = new System.Windows.Forms.TextBox();
             this.uiDriverID = new System.Windows.Forms.Label();
             this.uiMenuItemTab = new System.Windows.Forms.TabPage();
+            this.uiMenuItemClearButton = new System.Windows.Forms.Button();
             this.uiCreateMenuItem = new System.Windows.Forms.Button();
             this.uiMenuItemPrice = new System.Windows.Forms.Label();
             this.uiMenuItemPriceTextBox = new System.Windows.Forms.TextBox();
@@ -78,10 +83,11 @@ namespace CIS560
             this.uiMenuItemNameTextBox = new System.Windows.Forms.TextBox();
             this.uiMenuItemRestaurantID = new System.Windows.Forms.Label();
             this.uiMenuItemRestaurantIDTextBox = new System.Windows.Forms.TextBox();
-            this.GetMenuItemButton = new System.Windows.Forms.Button();
+            this.uiGetMenuItemButton = new System.Windows.Forms.Button();
             this.uiMenuItemIDTextBox = new System.Windows.Forms.TextBox();
             this.uiMenuItemID = new System.Windows.Forms.Label();
             this.uiOrderTab = new System.Windows.Forms.TabPage();
+            this.uiOrderClearButton = new System.Windows.Forms.Button();
             this.uiCreateOrderButton = new System.Windows.Forms.Button();
             this.uiOrderAddressID = new System.Windows.Forms.Label();
             this.uiOrderDriverID = new System.Windows.Forms.Label();
@@ -93,9 +99,10 @@ namespace CIS560
             this.uiOrderIDTextBox = new System.Windows.Forms.TextBox();
             this.uiOrderID = new System.Windows.Forms.Label();
             this.uiOrderMenuItemTab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.uiOMIClearButton = new System.Windows.Forms.Button();
+            this.uiCreateOMIButton = new System.Windows.Forms.Button();
             this.uiCreateOMIQuantity = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.uiGetOMIQuantityTextBox = new System.Windows.Forms.TextBox();
             this.uiCreateOMIMenuItemID = new System.Windows.Forms.Label();
             this.uiCreateOMIMenuItemIDTextBox = new System.Windows.Forms.TextBox();
             this.uiCreateOMIOrderIDTextBox = new System.Windows.Forms.TextBox();
@@ -106,14 +113,15 @@ namespace CIS560
             this.uiGetOMIOrderIDTextBox = new System.Windows.Forms.TextBox();
             this.uiGetOMIOrderID = new System.Windows.Forms.Label();
             this.uiRestaurantTab = new System.Windows.Forms.TabPage();
-            this.uiGetRestaurantButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.uiRestaurantID = new System.Windows.Forms.Label();
-            this.uiRestaurantNameTextBox = new System.Windows.Forms.TextBox();
-            this.uiRestaurantName = new System.Windows.Forms.Label();
-            this.uiRestaurantAddressIDTextBox = new System.Windows.Forms.TextBox();
-            this.uiRestaurantAddressID = new System.Windows.Forms.Label();
+            this.uiRestaurantClearButton = new System.Windows.Forms.Button();
             this.uiCreateRestaurantButton = new System.Windows.Forms.Button();
+            this.uiRestaurantAddressID = new System.Windows.Forms.Label();
+            this.uiRestaurantAddressIDTextBox = new System.Windows.Forms.TextBox();
+            this.uiRestaurantName = new System.Windows.Forms.Label();
+            this.uiRestaurantNameTextBox = new System.Windows.Forms.TextBox();
+            this.uiGetRestaurantButton = new System.Windows.Forms.Button();
+            this.uiRestaurantIDTextBox = new System.Windows.Forms.TextBox();
+            this.uiRestaurantID = new System.Windows.Forms.Label();
             this.uiTabControl.SuspendLayout();
             this.uiAddressTab.SuspendLayout();
             this.uiCustomerTab.SuspendLayout();
@@ -141,6 +149,8 @@ namespace CIS560
             // 
             // uiAddressTab
             // 
+            this.uiAddressTab.Controls.Add(this.uiAddressClearButton);
+            this.uiAddressTab.Controls.Add(this.uiChangeAddressButton);
             this.uiAddressTab.Controls.Add(this.uiAddressLine2);
             this.uiAddressTab.Controls.Add(this.uiAddressLine1);
             this.uiAddressTab.Controls.Add(this.uiAddressZip);
@@ -162,6 +172,26 @@ namespace CIS560
             this.uiAddressTab.TabIndex = 0;
             this.uiAddressTab.Text = "Address";
             this.uiAddressTab.UseVisualStyleBackColor = true;
+            // 
+            // uiAddressClearButton
+            // 
+            this.uiAddressClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiAddressClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiAddressClearButton.Name = "uiAddressClearButton";
+            this.uiAddressClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiAddressClearButton.TabIndex = 15;
+            this.uiAddressClearButton.Text = "Clear";
+            this.uiAddressClearButton.UseVisualStyleBackColor = true;
+            // 
+            // uiChangeAddressButton
+            // 
+            this.uiChangeAddressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiChangeAddressButton.Location = new System.Drawing.Point(318, 265);
+            this.uiChangeAddressButton.Name = "uiChangeAddressButton";
+            this.uiChangeAddressButton.Size = new System.Drawing.Size(193, 31);
+            this.uiChangeAddressButton.TabIndex = 14;
+            this.uiChangeAddressButton.Text = "Change Address";
+            this.uiChangeAddressButton.UseVisualStyleBackColor = true;
             // 
             // uiAddressLine2
             // 
@@ -272,6 +302,7 @@ namespace CIS560
             this.uiGetAddressButton.TabIndex = 2;
             this.uiGetAddressButton.Text = "Get Address";
             this.uiGetAddressButton.UseVisualStyleBackColor = true;
+            this.uiGetAddressButton.Click += new System.EventHandler(this.uiGetAddressButton_Click);
             // 
             // uiAddressIDTextBox
             // 
@@ -293,13 +324,14 @@ namespace CIS560
             // 
             // uiCustomerTab
             // 
-            this.uiCustomerTab.Controls.Add(this.label1);
+            this.uiCustomerTab.Controls.Add(this.uiCustomerClearButton);
+            this.uiCustomerTab.Controls.Add(this.uiCustomerPhoneNumber);
             this.uiCustomerTab.Controls.Add(this.uiCustomerEmail);
             this.uiCustomerTab.Controls.Add(this.uiCustomerAddressID);
             this.uiCustomerTab.Controls.Add(this.uiCustomerLastName);
             this.uiCustomerTab.Controls.Add(this.uiCustomerFirstName);
             this.uiCustomerTab.Controls.Add(this.uiCreateCustomerButton);
-            this.uiCustomerTab.Controls.Add(this.textBox6);
+            this.uiCustomerTab.Controls.Add(this.uiCustomerPhoneNumberTextBox);
             this.uiCustomerTab.Controls.Add(this.uiCustomerEmailTextBox);
             this.uiCustomerTab.Controls.Add(this.uiCustomerAddressIDTextBox);
             this.uiCustomerTab.Controls.Add(this.uiCustomerLastNameTextBox);
@@ -315,15 +347,25 @@ namespace CIS560
             this.uiCustomerTab.Text = "Customer";
             this.uiCustomerTab.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // uiCustomerClearButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 231);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 25);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Phone number:";
+            this.uiCustomerClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCustomerClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiCustomerClearButton.Name = "uiCustomerClearButton";
+            this.uiCustomerClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiCustomerClearButton.TabIndex = 17;
+            this.uiCustomerClearButton.Text = "Clear";
+            this.uiCustomerClearButton.UseVisualStyleBackColor = true;
+            // 
+            // uiCustomerPhoneNumber
+            // 
+            this.uiCustomerPhoneNumber.AutoSize = true;
+            this.uiCustomerPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCustomerPhoneNumber.Location = new System.Drawing.Point(3, 231);
+            this.uiCustomerPhoneNumber.Name = "uiCustomerPhoneNumber";
+            this.uiCustomerPhoneNumber.Size = new System.Drawing.Size(158, 25);
+            this.uiCustomerPhoneNumber.TabIndex = 16;
+            this.uiCustomerPhoneNumber.Text = "Phone number:";
             // 
             // uiCustomerEmail
             // 
@@ -354,7 +396,6 @@ namespace CIS560
             this.uiCustomerLastName.Size = new System.Drawing.Size(121, 25);
             this.uiCustomerLastName.TabIndex = 13;
             this.uiCustomerLastName.Text = "Last Name:";
-            this.uiCustomerLastName.Click += new System.EventHandler(this.label1_Click);
             // 
             // uiCustomerFirstName
             // 
@@ -376,13 +417,13 @@ namespace CIS560
             this.uiCreateCustomerButton.Text = "Create Customer";
             this.uiCreateCustomerButton.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // uiCustomerPhoneNumberTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(167, 228);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(403, 31);
-            this.textBox6.TabIndex = 10;
+            this.uiCustomerPhoneNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCustomerPhoneNumberTextBox.Location = new System.Drawing.Point(167, 228);
+            this.uiCustomerPhoneNumberTextBox.Name = "uiCustomerPhoneNumberTextBox";
+            this.uiCustomerPhoneNumberTextBox.Size = new System.Drawing.Size(403, 31);
+            this.uiCustomerPhoneNumberTextBox.TabIndex = 10;
             // 
             // uiCustomerEmailTextBox
             // 
@@ -446,6 +487,7 @@ namespace CIS560
             // 
             // uiDriverTab
             // 
+            this.uiDriverTab.Controls.Add(this.uiDriverClearButton);
             this.uiDriverTab.Controls.Add(this.uiCreateDriverButton);
             this.uiDriverTab.Controls.Add(this.uiDriverLicenseNumber);
             this.uiDriverTab.Controls.Add(this.uiDriverLastName);
@@ -463,6 +505,16 @@ namespace CIS560
             this.uiDriverTab.TabIndex = 2;
             this.uiDriverTab.Text = "Driver";
             this.uiDriverTab.UseVisualStyleBackColor = true;
+            // 
+            // uiDriverClearButton
+            // 
+            this.uiDriverClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiDriverClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiDriverClearButton.Name = "uiDriverClearButton";
+            this.uiDriverClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiDriverClearButton.TabIndex = 18;
+            this.uiDriverClearButton.Text = "Clear";
+            this.uiDriverClearButton.UseVisualStyleBackColor = true;
             // 
             // uiCreateDriverButton
             // 
@@ -558,6 +610,7 @@ namespace CIS560
             // 
             // uiMenuItemTab
             // 
+            this.uiMenuItemTab.Controls.Add(this.uiMenuItemClearButton);
             this.uiMenuItemTab.Controls.Add(this.uiCreateMenuItem);
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemPrice);
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemPriceTextBox);
@@ -565,7 +618,7 @@ namespace CIS560
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemNameTextBox);
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemRestaurantID);
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemRestaurantIDTextBox);
-            this.uiMenuItemTab.Controls.Add(this.GetMenuItemButton);
+            this.uiMenuItemTab.Controls.Add(this.uiGetMenuItemButton);
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemIDTextBox);
             this.uiMenuItemTab.Controls.Add(this.uiMenuItemID);
             this.uiMenuItemTab.Location = new System.Drawing.Point(4, 22);
@@ -575,6 +628,16 @@ namespace CIS560
             this.uiMenuItemTab.TabIndex = 3;
             this.uiMenuItemTab.Text = "Menu Item";
             this.uiMenuItemTab.UseVisualStyleBackColor = true;
+            // 
+            // uiMenuItemClearButton
+            // 
+            this.uiMenuItemClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiMenuItemClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiMenuItemClearButton.Name = "uiMenuItemClearButton";
+            this.uiMenuItemClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiMenuItemClearButton.TabIndex = 19;
+            this.uiMenuItemClearButton.Text = "Clear";
+            this.uiMenuItemClearButton.UseVisualStyleBackColor = true;
             // 
             // uiCreateMenuItem
             // 
@@ -640,15 +703,15 @@ namespace CIS560
             this.uiMenuItemRestaurantIDTextBox.Size = new System.Drawing.Size(409, 31);
             this.uiMenuItemRestaurantIDTextBox.TabIndex = 12;
             // 
-            // GetMenuItemButton
+            // uiGetMenuItemButton
             // 
-            this.GetMenuItemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GetMenuItemButton.Location = new System.Drawing.Point(161, 43);
-            this.GetMenuItemButton.Name = "GetMenuItemButton";
-            this.GetMenuItemButton.Size = new System.Drawing.Size(209, 31);
-            this.GetMenuItemButton.TabIndex = 11;
-            this.GetMenuItemButton.Text = "Get Menu Item";
-            this.GetMenuItemButton.UseVisualStyleBackColor = true;
+            this.uiGetMenuItemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiGetMenuItemButton.Location = new System.Drawing.Point(161, 43);
+            this.uiGetMenuItemButton.Name = "uiGetMenuItemButton";
+            this.uiGetMenuItemButton.Size = new System.Drawing.Size(209, 31);
+            this.uiGetMenuItemButton.TabIndex = 11;
+            this.uiGetMenuItemButton.Text = "Get Menu Item";
+            this.uiGetMenuItemButton.UseVisualStyleBackColor = true;
             // 
             // uiMenuItemIDTextBox
             // 
@@ -670,6 +733,7 @@ namespace CIS560
             // 
             // uiOrderTab
             // 
+            this.uiOrderTab.Controls.Add(this.uiOrderClearButton);
             this.uiOrderTab.Controls.Add(this.uiCreateOrderButton);
             this.uiOrderTab.Controls.Add(this.uiOrderAddressID);
             this.uiOrderTab.Controls.Add(this.uiOrderDriverID);
@@ -687,6 +751,16 @@ namespace CIS560
             this.uiOrderTab.TabIndex = 4;
             this.uiOrderTab.Text = "Order";
             this.uiOrderTab.UseVisualStyleBackColor = true;
+            // 
+            // uiOrderClearButton
+            // 
+            this.uiOrderClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiOrderClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiOrderClearButton.Name = "uiOrderClearButton";
+            this.uiOrderClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiOrderClearButton.TabIndex = 22;
+            this.uiOrderClearButton.Text = "Clear";
+            this.uiOrderClearButton.UseVisualStyleBackColor = true;
             // 
             // uiCreateOrderButton
             // 
@@ -782,9 +856,10 @@ namespace CIS560
             // 
             // uiOrderMenuItemTab
             // 
-            this.uiOrderMenuItemTab.Controls.Add(this.button1);
+            this.uiOrderMenuItemTab.Controls.Add(this.uiOMIClearButton);
+            this.uiOrderMenuItemTab.Controls.Add(this.uiCreateOMIButton);
             this.uiOrderMenuItemTab.Controls.Add(this.uiCreateOMIQuantity);
-            this.uiOrderMenuItemTab.Controls.Add(this.textBox1);
+            this.uiOrderMenuItemTab.Controls.Add(this.uiGetOMIQuantityTextBox);
             this.uiOrderMenuItemTab.Controls.Add(this.uiCreateOMIMenuItemID);
             this.uiOrderMenuItemTab.Controls.Add(this.uiCreateOMIMenuItemIDTextBox);
             this.uiOrderMenuItemTab.Controls.Add(this.uiCreateOMIOrderIDTextBox);
@@ -802,15 +877,25 @@ namespace CIS560
             this.uiOrderMenuItemTab.Text = "Order Menu Item";
             this.uiOrderMenuItemTab.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // uiOMIClearButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(160, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 31);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Create Order Menu Item";
-            this.button1.UseVisualStyleBackColor = true;
+            this.uiOMIClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiOMIClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiOMIClearButton.Name = "uiOMIClearButton";
+            this.uiOMIClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiOMIClearButton.TabIndex = 27;
+            this.uiOMIClearButton.Text = "Clear";
+            this.uiOMIClearButton.UseVisualStyleBackColor = true;
+            // 
+            // uiCreateOMIButton
+            // 
+            this.uiCreateOMIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCreateOMIButton.Location = new System.Drawing.Point(160, 226);
+            this.uiCreateOMIButton.Name = "uiCreateOMIButton";
+            this.uiCreateOMIButton.Size = new System.Drawing.Size(254, 31);
+            this.uiCreateOMIButton.TabIndex = 26;
+            this.uiCreateOMIButton.Text = "Create Order Menu Item";
+            this.uiCreateOMIButton.UseVisualStyleBackColor = true;
             // 
             // uiCreateOMIQuantity
             // 
@@ -822,13 +907,13 @@ namespace CIS560
             this.uiCreateOMIQuantity.TabIndex = 25;
             this.uiCreateOMIQuantity.Text = "Quantity:";
             // 
-            // textBox1
+            // uiGetOMIQuantityTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(160, 189);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 31);
-            this.textBox1.TabIndex = 24;
+            this.uiGetOMIQuantityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiGetOMIQuantityTextBox.Location = new System.Drawing.Point(160, 189);
+            this.uiGetOMIQuantityTextBox.Name = "uiGetOMIQuantityTextBox";
+            this.uiGetOMIQuantityTextBox.Size = new System.Drawing.Size(419, 31);
+            this.uiGetOMIQuantityTextBox.TabIndex = 24;
             // 
             // uiCreateOMIMenuItemID
             // 
@@ -914,13 +999,14 @@ namespace CIS560
             // 
             // uiRestaurantTab
             // 
+            this.uiRestaurantTab.Controls.Add(this.uiRestaurantClearButton);
             this.uiRestaurantTab.Controls.Add(this.uiCreateRestaurantButton);
             this.uiRestaurantTab.Controls.Add(this.uiRestaurantAddressID);
             this.uiRestaurantTab.Controls.Add(this.uiRestaurantAddressIDTextBox);
             this.uiRestaurantTab.Controls.Add(this.uiRestaurantName);
             this.uiRestaurantTab.Controls.Add(this.uiRestaurantNameTextBox);
             this.uiRestaurantTab.Controls.Add(this.uiGetRestaurantButton);
-            this.uiRestaurantTab.Controls.Add(this.textBox2);
+            this.uiRestaurantTab.Controls.Add(this.uiRestaurantIDTextBox);
             this.uiRestaurantTab.Controls.Add(this.uiRestaurantID);
             this.uiRestaurantTab.Location = new System.Drawing.Point(4, 22);
             this.uiRestaurantTab.Name = "uiRestaurantTab";
@@ -930,59 +1016,25 @@ namespace CIS560
             this.uiRestaurantTab.Text = "Restaurant";
             this.uiRestaurantTab.UseVisualStyleBackColor = true;
             // 
-            // uiGetRestaurantButton
+            // uiRestaurantClearButton
             // 
-            this.uiGetRestaurantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiGetRestaurantButton.Location = new System.Drawing.Point(165, 43);
-            this.uiGetRestaurantButton.Name = "uiGetRestaurantButton";
-            this.uiGetRestaurantButton.Size = new System.Drawing.Size(202, 31);
-            this.uiGetRestaurantButton.TabIndex = 20;
-            this.uiGetRestaurantButton.Text = "Get Restaurant";
-            this.uiGetRestaurantButton.UseVisualStyleBackColor = true;
+            this.uiRestaurantClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRestaurantClearButton.Location = new System.Drawing.Point(6, 265);
+            this.uiRestaurantClearButton.Name = "uiRestaurantClearButton";
+            this.uiRestaurantClearButton.Size = new System.Drawing.Size(90, 31);
+            this.uiRestaurantClearButton.TabIndex = 26;
+            this.uiRestaurantClearButton.Text = "Clear";
+            this.uiRestaurantClearButton.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // uiCreateRestaurantButton
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(165, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(411, 31);
-            this.textBox2.TabIndex = 19;
-            // 
-            // uiRestaurantID
-            // 
-            this.uiRestaurantID.AutoSize = true;
-            this.uiRestaurantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiRestaurantID.Location = new System.Drawing.Point(10, 9);
-            this.uiRestaurantID.Name = "uiRestaurantID";
-            this.uiRestaurantID.Size = new System.Drawing.Size(149, 25);
-            this.uiRestaurantID.TabIndex = 18;
-            this.uiRestaurantID.Text = "Restaurant ID:";
-            // 
-            // uiRestaurantNameTextBox
-            // 
-            this.uiRestaurantNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiRestaurantNameTextBox.Location = new System.Drawing.Point(165, 80);
-            this.uiRestaurantNameTextBox.Name = "uiRestaurantNameTextBox";
-            this.uiRestaurantNameTextBox.Size = new System.Drawing.Size(411, 31);
-            this.uiRestaurantNameTextBox.TabIndex = 21;
-            // 
-            // uiRestaurantName
-            // 
-            this.uiRestaurantName.AutoSize = true;
-            this.uiRestaurantName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiRestaurantName.Location = new System.Drawing.Point(85, 83);
-            this.uiRestaurantName.Name = "uiRestaurantName";
-            this.uiRestaurantName.Size = new System.Drawing.Size(74, 25);
-            this.uiRestaurantName.TabIndex = 22;
-            this.uiRestaurantName.Text = "Name:";
-            // 
-            // uiRestaurantAddressIDTextBox
-            // 
-            this.uiRestaurantAddressIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiRestaurantAddressIDTextBox.Location = new System.Drawing.Point(165, 117);
-            this.uiRestaurantAddressIDTextBox.Name = "uiRestaurantAddressIDTextBox";
-            this.uiRestaurantAddressIDTextBox.Size = new System.Drawing.Size(411, 31);
-            this.uiRestaurantAddressIDTextBox.TabIndex = 23;
+            this.uiCreateRestaurantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCreateRestaurantButton.Location = new System.Drawing.Point(165, 154);
+            this.uiCreateRestaurantButton.Name = "uiCreateRestaurantButton";
+            this.uiCreateRestaurantButton.Size = new System.Drawing.Size(202, 31);
+            this.uiCreateRestaurantButton.TabIndex = 25;
+            this.uiCreateRestaurantButton.Text = "Create Restaurant";
+            this.uiCreateRestaurantButton.UseVisualStyleBackColor = true;
             // 
             // uiRestaurantAddressID
             // 
@@ -994,15 +1046,59 @@ namespace CIS560
             this.uiRestaurantAddressID.TabIndex = 24;
             this.uiRestaurantAddressID.Text = "Address ID:";
             // 
-            // uiCreateRestaurantButton
+            // uiRestaurantAddressIDTextBox
             // 
-            this.uiCreateRestaurantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiCreateRestaurantButton.Location = new System.Drawing.Point(165, 154);
-            this.uiCreateRestaurantButton.Name = "uiCreateRestaurantButton";
-            this.uiCreateRestaurantButton.Size = new System.Drawing.Size(202, 31);
-            this.uiCreateRestaurantButton.TabIndex = 25;
-            this.uiCreateRestaurantButton.Text = "Create Restaurant";
-            this.uiCreateRestaurantButton.UseVisualStyleBackColor = true;
+            this.uiRestaurantAddressIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRestaurantAddressIDTextBox.Location = new System.Drawing.Point(165, 117);
+            this.uiRestaurantAddressIDTextBox.Name = "uiRestaurantAddressIDTextBox";
+            this.uiRestaurantAddressIDTextBox.Size = new System.Drawing.Size(411, 31);
+            this.uiRestaurantAddressIDTextBox.TabIndex = 23;
+            // 
+            // uiRestaurantName
+            // 
+            this.uiRestaurantName.AutoSize = true;
+            this.uiRestaurantName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRestaurantName.Location = new System.Drawing.Point(85, 83);
+            this.uiRestaurantName.Name = "uiRestaurantName";
+            this.uiRestaurantName.Size = new System.Drawing.Size(74, 25);
+            this.uiRestaurantName.TabIndex = 22;
+            this.uiRestaurantName.Text = "Name:";
+            // 
+            // uiRestaurantNameTextBox
+            // 
+            this.uiRestaurantNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRestaurantNameTextBox.Location = new System.Drawing.Point(165, 80);
+            this.uiRestaurantNameTextBox.Name = "uiRestaurantNameTextBox";
+            this.uiRestaurantNameTextBox.Size = new System.Drawing.Size(411, 31);
+            this.uiRestaurantNameTextBox.TabIndex = 21;
+            // 
+            // uiGetRestaurantButton
+            // 
+            this.uiGetRestaurantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiGetRestaurantButton.Location = new System.Drawing.Point(165, 43);
+            this.uiGetRestaurantButton.Name = "uiGetRestaurantButton";
+            this.uiGetRestaurantButton.Size = new System.Drawing.Size(202, 31);
+            this.uiGetRestaurantButton.TabIndex = 20;
+            this.uiGetRestaurantButton.Text = "Get Restaurant";
+            this.uiGetRestaurantButton.UseVisualStyleBackColor = true;
+            // 
+            // uiRestaurantIDTextBox
+            // 
+            this.uiRestaurantIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRestaurantIDTextBox.Location = new System.Drawing.Point(165, 6);
+            this.uiRestaurantIDTextBox.Name = "uiRestaurantIDTextBox";
+            this.uiRestaurantIDTextBox.Size = new System.Drawing.Size(411, 31);
+            this.uiRestaurantIDTextBox.TabIndex = 19;
+            // 
+            // uiRestaurantID
+            // 
+            this.uiRestaurantID.AutoSize = true;
+            this.uiRestaurantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRestaurantID.Location = new System.Drawing.Point(10, 9);
+            this.uiRestaurantID.Name = "uiRestaurantID";
+            this.uiRestaurantID.Size = new System.Drawing.Size(149, 25);
+            this.uiRestaurantID.TabIndex = 18;
+            this.uiRestaurantID.Text = "Restaurant ID:";
             // 
             // Form1
             // 
@@ -1063,13 +1159,13 @@ namespace CIS560
         private System.Windows.Forms.TextBox uiCustomerFirstNameTextBox;
         private System.Windows.Forms.TextBox uiCustomerAddressIDTextBox;
         private System.Windows.Forms.Button uiCreateCustomerButton;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox uiCustomerPhoneNumberTextBox;
         private System.Windows.Forms.TextBox uiCustomerEmailTextBox;
         private System.Windows.Forms.Label uiCustomerFirstName;
         private System.Windows.Forms.Label uiCustomerLastName;
         private System.Windows.Forms.Label uiCustomerAddressID;
         private System.Windows.Forms.Label uiCustomerEmail;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label uiCustomerPhoneNumber;
         private System.Windows.Forms.TextBox uiDriverFirstNameTextBox;
         private System.Windows.Forms.Button uiGetDriverButton;
         private System.Windows.Forms.TextBox uiDriverIDTextBox;
@@ -1083,7 +1179,7 @@ namespace CIS560
         private System.Windows.Forms.TextBox uiMenuItemNameTextBox;
         private System.Windows.Forms.Label uiMenuItemRestaurantID;
         private System.Windows.Forms.TextBox uiMenuItemRestaurantIDTextBox;
-        private System.Windows.Forms.Button GetMenuItemButton;
+        private System.Windows.Forms.Button uiGetMenuItemButton;
         private System.Windows.Forms.TextBox uiMenuItemIDTextBox;
         private System.Windows.Forms.Label uiMenuItemID;
         private System.Windows.Forms.Label uiMenuItemPrice;
@@ -1110,16 +1206,24 @@ namespace CIS560
         private System.Windows.Forms.TextBox uiCreateOMIOrderIDTextBox;
         private System.Windows.Forms.Label uiCreateOMIOrderID;
         private System.Windows.Forms.Label uiCreateOMIQuantity;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox uiGetOMIQuantityTextBox;
+        private System.Windows.Forms.Button uiCreateOMIButton;
         private System.Windows.Forms.Button uiGetRestaurantButton;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox uiRestaurantIDTextBox;
         private System.Windows.Forms.Label uiRestaurantID;
         private System.Windows.Forms.Button uiCreateRestaurantButton;
         private System.Windows.Forms.Label uiRestaurantAddressID;
         private System.Windows.Forms.TextBox uiRestaurantAddressIDTextBox;
         private System.Windows.Forms.Label uiRestaurantName;
         private System.Windows.Forms.TextBox uiRestaurantNameTextBox;
+        private System.Windows.Forms.Button uiAddressClearButton;
+        private System.Windows.Forms.Button uiChangeAddressButton;
+        private System.Windows.Forms.Button uiCustomerClearButton;
+        private System.Windows.Forms.Button uiDriverClearButton;
+        private System.Windows.Forms.Button uiMenuItemClearButton;
+        private System.Windows.Forms.Button uiOrderClearButton;
+        private System.Windows.Forms.Button uiOMIClearButton;
+        private System.Windows.Forms.Button uiRestaurantClearButton;
     }
 }
 

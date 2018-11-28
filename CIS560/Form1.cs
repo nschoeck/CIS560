@@ -20,9 +20,9 @@ namespace CIS560
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void uiGetAddressButton_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
