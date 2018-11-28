@@ -103,13 +103,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SQL\CreateTables.sql" />
+    <Content Include="SQL\GenerateData.sql" />
     <Content Include="SQL\Procedures\Address\CreateAddress.sql" />
     <Content Include="SQL\Procedures\Address\GetAddress.sql" />
+    <Content Include="SQL\Procedures\Customer\CreateCustomer.sql" />
     <Content Include="SQL\Procedures\Customer\GetCustomer.sql" />
+    <Content Include="SQL\Procedures\Driver\CreateDriver.sql" />
     <Content Include="SQL\Procedures\Driver\GetDriver.sql" />
+    <Content Include="SQL\Procedures\GetOrdersInArea.sql" />
+    <Content Include="SQL\Procedures\GetTotal.sql" />
+    <Content Include="SQL\Procedures\MenuItem\CreateMenuItem.sql" />
     <Content Include="SQL\Procedures\MenuItem\GetMenuItem.sql" />
+    <Content Include="SQL\Procedures\OrderMenuItem\CreateOrderMenuItem.sql" />
     <Content Include="SQL\Procedures\OrderMenuItem\GetOrderMenuItem.sql" />
+    <Content Include="SQL\Procedures\Order\CreateOrder.sql" />
     <Content Include="SQL\Procedures\Order\GetOrder.sql" />
+    <Content Include="SQL\Procedures\Restaurant\CreateRestaurant.sql" />
     <Content Include="SQL\Procedures\Restaurant\GetRestaurant.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
