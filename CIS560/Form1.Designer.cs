@@ -122,6 +122,15 @@ namespace CIS560
             this.uiGetRestaurantButton = new System.Windows.Forms.Button();
             this.uiRestaurantIDTextBox = new System.Windows.Forms.TextBox();
             this.uiRestaurantID = new System.Windows.Forms.Label();
+            this.uiEarningsTab = new System.Windows.Forms.TabPage();
+            this.unGetEarningsButton = new System.Windows.Forms.Button();
+            this.uiEarningsTextBox = new System.Windows.Forms.TextBox();
+            this.uiEarnings = new System.Windows.Forms.Label();
+            this.uiAreaTab = new System.Windows.Forms.TabPage();
+            this.uiAreaZip = new System.Windows.Forms.Label();
+            this.uiAreaZipTextBox = new System.Windows.Forms.TextBox();
+            this.uiGetAreaOrderCountButton = new System.Windows.Forms.Button();
+            this.uiAreaReturnTextBox = new System.Windows.Forms.TextBox();
             this.uiTabControl.SuspendLayout();
             this.uiAddressTab.SuspendLayout();
             this.uiCustomerTab.SuspendLayout();
@@ -130,6 +139,8 @@ namespace CIS560
             this.uiOrderTab.SuspendLayout();
             this.uiOrderMenuItemTab.SuspendLayout();
             this.uiRestaurantTab.SuspendLayout();
+            this.uiEarningsTab.SuspendLayout();
+            this.uiAreaTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiTabControl
@@ -141,6 +152,8 @@ namespace CIS560
             this.uiTabControl.Controls.Add(this.uiOrderTab);
             this.uiTabControl.Controls.Add(this.uiOrderMenuItemTab);
             this.uiTabControl.Controls.Add(this.uiRestaurantTab);
+            this.uiTabControl.Controls.Add(this.uiEarningsTab);
+            this.uiTabControl.Controls.Add(this.uiAreaTab);
             this.uiTabControl.Location = new System.Drawing.Point(-2, -2);
             this.uiTabControl.Name = "uiTabControl";
             this.uiTabControl.SelectedIndex = 0;
@@ -1100,6 +1113,101 @@ namespace CIS560
             this.uiRestaurantID.TabIndex = 18;
             this.uiRestaurantID.Text = "Restaurant ID:";
             // 
+            // uiEarningsTab
+            // 
+            this.uiEarningsTab.Controls.Add(this.unGetEarningsButton);
+            this.uiEarningsTab.Controls.Add(this.uiEarningsTextBox);
+            this.uiEarningsTab.Controls.Add(this.uiEarnings);
+            this.uiEarningsTab.Location = new System.Drawing.Point(4, 22);
+            this.uiEarningsTab.Name = "uiEarningsTab";
+            this.uiEarningsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiEarningsTab.Size = new System.Drawing.Size(582, 299);
+            this.uiEarningsTab.TabIndex = 7;
+            this.uiEarningsTab.Text = "Earnings";
+            this.uiEarningsTab.UseVisualStyleBackColor = true;
+            // 
+            // unGetEarningsButton
+            // 
+            this.unGetEarningsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unGetEarningsButton.Location = new System.Drawing.Point(119, 43);
+            this.unGetEarningsButton.Name = "unGetEarningsButton";
+            this.unGetEarningsButton.Size = new System.Drawing.Size(202, 31);
+            this.unGetEarningsButton.TabIndex = 23;
+            this.unGetEarningsButton.Text = "Get Total Earnings";
+            this.unGetEarningsButton.UseVisualStyleBackColor = true;
+            // 
+            // uiEarningsTextBox
+            // 
+            this.uiEarningsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiEarningsTextBox.Location = new System.Drawing.Point(119, 6);
+            this.uiEarningsTextBox.Name = "uiEarningsTextBox";
+            this.uiEarningsTextBox.ReadOnly = true;
+            this.uiEarningsTextBox.Size = new System.Drawing.Size(457, 31);
+            this.uiEarningsTextBox.TabIndex = 22;
+            // 
+            // uiEarnings
+            // 
+            this.uiEarnings.AutoSize = true;
+            this.uiEarnings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiEarnings.Location = new System.Drawing.Point(10, 9);
+            this.uiEarnings.Name = "uiEarnings";
+            this.uiEarnings.Size = new System.Drawing.Size(103, 25);
+            this.uiEarnings.TabIndex = 21;
+            this.uiEarnings.Text = "Earnings:";
+            // 
+            // uiAreaTab
+            // 
+            this.uiAreaTab.Controls.Add(this.uiAreaReturnTextBox);
+            this.uiAreaTab.Controls.Add(this.uiGetAreaOrderCountButton);
+            this.uiAreaTab.Controls.Add(this.uiAreaZip);
+            this.uiAreaTab.Controls.Add(this.uiAreaZipTextBox);
+            this.uiAreaTab.Location = new System.Drawing.Point(4, 22);
+            this.uiAreaTab.Name = "uiAreaTab";
+            this.uiAreaTab.Padding = new System.Windows.Forms.Padding(3);
+            this.uiAreaTab.Size = new System.Drawing.Size(582, 299);
+            this.uiAreaTab.TabIndex = 8;
+            this.uiAreaTab.Text = "Area";
+            this.uiAreaTab.UseVisualStyleBackColor = true;
+            // 
+            // uiAreaZip
+            // 
+            this.uiAreaZip.AutoSize = true;
+            this.uiAreaZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiAreaZip.Location = new System.Drawing.Point(10, 9);
+            this.uiAreaZip.Name = "uiAreaZip";
+            this.uiAreaZip.Size = new System.Drawing.Size(48, 25);
+            this.uiAreaZip.TabIndex = 13;
+            this.uiAreaZip.Text = "Zip:";
+            // 
+            // uiAreaZipTextBox
+            // 
+            this.uiAreaZipTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiAreaZipTextBox.Location = new System.Drawing.Point(64, 6);
+            this.uiAreaZipTextBox.Name = "uiAreaZipTextBox";
+            this.uiAreaZipTextBox.Size = new System.Drawing.Size(506, 31);
+            this.uiAreaZipTextBox.TabIndex = 12;
+            // 
+            // uiGetAreaOrderCountButton
+            // 
+            this.uiGetAreaOrderCountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiGetAreaOrderCountButton.Location = new System.Drawing.Point(64, 43);
+            this.uiGetAreaOrderCountButton.Name = "uiGetAreaOrderCountButton";
+            this.uiGetAreaOrderCountButton.Size = new System.Drawing.Size(209, 31);
+            this.uiGetAreaOrderCountButton.TabIndex = 14;
+            this.uiGetAreaOrderCountButton.Text = "Get Area Order Count";
+            this.uiGetAreaOrderCountButton.UseVisualStyleBackColor = true;
+            // 
+            // uiAreaReturnTextBox
+            // 
+            this.uiAreaReturnTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiAreaReturnTextBox.Location = new System.Drawing.Point(10, 80);
+            this.uiAreaReturnTextBox.Multiline = true;
+            this.uiAreaReturnTextBox.Name = "uiAreaReturnTextBox";
+            this.uiAreaReturnTextBox.ReadOnly = true;
+            this.uiAreaReturnTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.uiAreaReturnTextBox.Size = new System.Drawing.Size(560, 213);
+            this.uiAreaReturnTextBox.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1124,6 +1232,10 @@ namespace CIS560
             this.uiOrderMenuItemTab.PerformLayout();
             this.uiRestaurantTab.ResumeLayout(false);
             this.uiRestaurantTab.PerformLayout();
+            this.uiEarningsTab.ResumeLayout(false);
+            this.uiEarningsTab.PerformLayout();
+            this.uiAreaTab.ResumeLayout(false);
+            this.uiAreaTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1224,6 +1336,15 @@ namespace CIS560
         private System.Windows.Forms.Button uiOrderClearButton;
         private System.Windows.Forms.Button uiOMIClearButton;
         private System.Windows.Forms.Button uiRestaurantClearButton;
+        private System.Windows.Forms.TabPage uiEarningsTab;
+        private System.Windows.Forms.Button unGetEarningsButton;
+        private System.Windows.Forms.TextBox uiEarningsTextBox;
+        private System.Windows.Forms.Label uiEarnings;
+        private System.Windows.Forms.TabPage uiAreaTab;
+        private System.Windows.Forms.TextBox uiAreaReturnTextBox;
+        private System.Windows.Forms.Button uiGetAreaOrderCountButton;
+        private System.Windows.Forms.Label uiAreaZip;
+        private System.Windows.Forms.TextBox uiAreaZipTextBox;
     }
 }
 
